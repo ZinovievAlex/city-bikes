@@ -1,0 +1,26 @@
+.stations {
+  $item: &;
+  .ant-list-item:hover #{$item}__icon {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__like {
+    padding: 5px;
+    cursor: pointer;
+  }
+  &__field {
+    display: none;
+  }
+  &__field:checked + #{$item}__icon {
+    color: red;
+    opacity: 1;
+    visibility: visible;
+  }
+  &__icon {
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all;
+    color: #a0a0a0;
+  }
+}
